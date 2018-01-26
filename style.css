@@ -446,35 +446,9 @@ template {
   display: none;
 }
   #container{
-    margin: 0 auto;
-  }
-
-  /********************Begin page styles************************************/
-
-
-  #container section.wrap{
     max-width: 1500px;
     width: 100%;
-    margin-bottom: 60px;
-  }
-
-  #container section.wrap .article-box{
-    max-width: 500px;
-    width: 100%;
     margin: 0 auto;
-    -webkit-box-shadow: 1px 0px 8px 1px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    1px 0px 8px 1px rgba(50, 50, 50, 0.75);
-     box-shadow:         1px 0px 8px 1px rgba(50, 50, 50, 0.75);
-  }
-
-    #container section.wrap .article-box .article-image img{
-      max-width: 100%;
-    }
-
-  #container section.wrap .article-box .article-title{
-    text-align: center;
-    padding: 0 10%;
-    border-bottom: 1px solid #EEEEEE;
   }
 
 
