@@ -1,19 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
+          <pre>{{results | json}}</pre>
 <article id="container">
     <section class="wrap">
+
+
           <div class="article-box">
             <div class="article-image">
-                  <img src="http://via.placeholder.com/500x350" alt="">
-            </div><!--image-->
+                  <img src="https://avatars1.githubusercontent.com/u/2191378?v=4//500x350" alt="">
+                </div><!--image-->
             <div class="article-title">
-              <h2>Dummy Title of Article, Very Good Stuff by the way.</h2>
+              <h2> {{results.name | json}}</h2>
+
+
+
+                  <p>{{ItemsResponse}}</p>
             </div><!--title-->
             <div class="article-info">
                 <ul>
-                  <li><i class="fa fa-user"></i>{{ data | json }}</li>
-                  <li><i class="fa fa-user"></i> 123j</li>
-                  <li><i class="fa fa-clock-o" aria-hidden="true"></i> 6 hours ago</li>
-                  <li><i class="fa fa-bolt" aria-hidden="true"></i> 292</li>
+
+                  <li><i class="fa fa-user"></i>/u/{{results.login | json}}</li>
+                  <li><i class="fa fa-clock-o" aria-hidden="true"></i> 6 hours ago  {{results.created_at | json}}</li>
+                  <li><i class="fa fa-bolt" aria-hidden="true"></i> {{results.followers | json}}</li>
                 </ul>
             </div><!--info-->
           </div>
