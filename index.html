@@ -6,7 +6,31 @@
   <title>Craft Test</title>
   <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <script src="https://use.fontawesome.com/36764bd9df.js"></script>
+
+  <!-- Load libraries (Note: IE required polyfills, in this exact order_ -->
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+  <!-- Configure SystemJS -->
+  <script>
+      System.config({
+          packages: {
+              app: {
+                  format: 'register',
+                  defaultExtension: 'js'
+              }
+          }
+      });
+      System.import('app/js/main').then(null, console.error.bind(console));
+  </script>
+
 </head>
 <body>
   <header>
@@ -14,21 +38,25 @@
   </header>
   <article id="container">
       <section class="wrap">
+        <div class="container-fluid">
+        
+        </div>
             <div class="article-box">
               <div class="article-image">
-
+                    <img src="http://via.placeholder.com/500x350" alt="">
               </div><!--image-->
               <div class="article-title">
                 <h2>Dummy Title of Article, Very Good Stuff by the way.</h2>
               </div><!--title-->
               <div class="article-info">
                   <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><i class="fa fa-user"></i> /u/sjsjjsjsj</li>
+                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 6 hours ago</li>
+                    <li><i class="fa fa-bolt" aria-hidden="true"></i> 292</li>
                   </ul>
               </div><!--info-->
             </div>
+
       </section>
   </article><!--container-->
   <script src="main.js" type="text/javascript"></script>
