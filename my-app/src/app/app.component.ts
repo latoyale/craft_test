@@ -16,10 +16,11 @@ export class AppComponent implements OnInit{
   title = 'app';
  results: any[];
 
+
   constructor(private http: HttpClient){ }
 
   ngOnInit(): void {
-    this.http.get<any[]>('https://www.reddit.com/r/analog/top/.json?limit=5&after=t3_10omtd/ ').subscribe(data => {
+    this.http.get('https://api.github.com/users/seeschweiler').subscribe(data => {
       console.log(data);
       this.results = data;
     });
