@@ -1,12 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-          <pre>{{results | json}}</pre>
+    <pre>{{results | json}}</pre>
 <article id="container">
     <section class="wrap">
 
-
           <div class="article-box">
             <div class="article-image">
-                  <img src="https://avatars1.githubusercontent.com/u/2191378?v=4//500x350" alt="">
+                  <img src="{{results.avatar_url | json}}">
+
+
+
                 </div><!--image-->
             <div class="article-title">
               <h2> {{results.name | json}}</h2>

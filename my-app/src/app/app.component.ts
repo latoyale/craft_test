@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 interface ItemsResponse {
-  results: string[];
+  results: any[];
 }
 
 @Component({
@@ -14,13 +14,12 @@ interface ItemsResponse {
 
 export class AppComponent implements OnInit{
   title = 'app';
- results: string[];
-
+ results: any[];
 
   constructor(private http: HttpClient){ }
 
   ngOnInit(): void {
-    this.http.get<ItemsResponse>('https://api.github.com/users/seeschweiler').subscribe(data => {
+    this.http.get<any[]>('https://www.reddit.com/r/analog/top/.json?limit=5&after=t3_10omtd/ ').subscribe(data => {
       console.log(data);
       this.results = data;
     });
